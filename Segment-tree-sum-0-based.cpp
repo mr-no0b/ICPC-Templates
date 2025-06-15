@@ -29,7 +29,7 @@ struct SegTree{
     }
     ll sum(ll ind,ll l, ll r, ll st, ll ed){
         if(r<st or l>ed)return 0;
-        if(l==st and r==ed)return tree[ind];
+        if(l<=st and r>=ed)return tree[ind];
         ll mid=(st+ed)/2;
         return sum(2*ind+1,l,min(r,mid),st,mid)+sum(2*ind+2,max(l,mid+1),r,mid+1,ed);
     }
