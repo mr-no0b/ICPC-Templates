@@ -27,6 +27,7 @@ struct SegTree{
         build(arr,2*ind+1,st,mid);build(arr,2*ind+2,mid+1,ed);
         tree[ind]=tree[2*ind+1]+tree[2*ind+2];
     }
+    //l theke r er sum
     ll sum(ll ind,ll l, ll r, ll st, ll ed){
         if(r<st or l>ed)return 0;
         if(l<=st and r>=ed)return tree[ind];
