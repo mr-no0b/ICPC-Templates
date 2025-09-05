@@ -12,7 +12,9 @@ struct Point {
     Point(): x(0), y(0) {}
     Point(ld _x, ld _y): x(_x), y(_y) {}
 };
-
+inline istream& operator>>(istream &is, Point &p){
+    return is >> p.x >> p.y;
+}
 static inline ostream& operator<<(ostream &os, const Point &p){
     os << fixed << setprecision(12) << (double)p.x << " " << (double)p.y;
     return os;
